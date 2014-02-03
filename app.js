@@ -19,6 +19,7 @@ var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
+var noteController = require('./controllers/note');
 
 /**
  * API keys + Passport configuration.
@@ -118,6 +119,8 @@ app.get('/api/aviary', apiController.getAviary);
 app.get('/api/paypal', apiController.getPayPal);
 app.get('/api/paypal/success', apiController.getPayPalSuccess);
 app.get('/api/paypal/cancel', apiController.getPayPalCancel);
+
+app.get('/notes', noteController.index);
 
 /**
  * OAuth routes for sign-in.
