@@ -121,6 +121,7 @@ app.get('/api/paypal/success', apiController.getPayPalSuccess);
 app.get('/api/paypal/cancel', apiController.getPayPalCancel);
 
 app.get('/notes', noteController.index);
+app.get('/notes/:note_id', noteController.show);
 
 /**
  * OAuth routes for sign-in.
